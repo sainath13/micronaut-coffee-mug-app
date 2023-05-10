@@ -1,0 +1,22 @@
+micronaut:
+  application:
+    name: micronautCoffeeMugService
+netty:
+  default:
+    allocator:
+      max-order: 3
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/coffee-mug-db
+    driverClassName: org.postgresql.Driver
+    username: newuser
+    password: password
+    schema-generate: CREATE_DROP
+    db-type: postgres
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: ${HBM2DLL_AUTO:update}
+        show_sql: ${JPA_SHOW_SQL:true}
