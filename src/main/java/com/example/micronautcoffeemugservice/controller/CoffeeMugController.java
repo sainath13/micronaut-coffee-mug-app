@@ -44,7 +44,7 @@ public class CoffeeMugController {
     ) {
         if (displayName.isEmpty() && coffeeMugType.isEmpty()
          && priceRange.isEmpty()) {
-            throw new BadRequestException("Invalid price range");
+            throw new BadRequestException("Invalid request. Must pass at least one of displayName, mugType and priceRange");
         }
         BigDecimal minPrice = null;
         BigDecimal maxPrice = null;
